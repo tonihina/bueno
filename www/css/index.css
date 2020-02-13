@@ -1,9 +1,13 @@
 * {
 	background-color: black;
+	transform-origin: 0 0;
 }
 
 
-
+.imagen{
+	width: 20%;
+	float: right;
+}
 #pantalla{
 	background-color: black; 
 	height: 100%;

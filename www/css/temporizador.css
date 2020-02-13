@@ -1,20 +1,17 @@
 * {
 	
 }
+
+.header{
+   text-align: center;
+}
 body {
 	
 }
 #screen {
-	font-family: Calibri,Arial;
-	font-weight: 200;
-	font-size: 35px;
-	width: 300px;
-	height: 50px;
-	color: gray;
-	letter-spacing: 3px;
-	margin: auto;
-	text-align: center;
-	color: white;
+   color: black;
+   text-align: center;
+   font-size: 40px;
 
 }
 .buttons {
@@ -31,8 +28,8 @@ justify-content: center;
 
 	height: 30px;
 	margin: 5px;
-	border: 1px solid #384049;
-  color: white;
+	
+  color: ;
   cursor: pointer;
   font-family: Calibri,Arial;
   font-weight: 300;
@@ -49,3 +46,45 @@ justify-content: center;
    background-image: linear-gradient(#2c6f05,#3aad02);
    text-shadow:      0px 1px 1px black;
 }
+
+.item {
+   
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   margin: auto;
+   
+}
+
+.item h2 {
+   text-align:center;
+   font-size: 24px;
+   width: 100%;
+   position: absolute;
+   margin-top: 55px;
+   margin-left: -15px;
+   color: white;
+   z-index: 1000;
+}
+
+svg {
+  -webkit-transform: rotate(-90deg);
+   transform: rotate(-90deg);
+   border-radius: 100%;
+   background-color: rgba(37, 182, 1, 0.6);
+}
+
+.circle_animation {
+ stroke-dasharray: 440; /* this value is the pixel circumference of the circle */
+ stroke-dashoffset: 440;
+ transition: all 1s linear;
+ 
+}
+
+.circle_animationS {
+   stroke-dasharray: 440; /* this value is the pixel circumference of the circle */
+   stroke-dashoffset: 440;
+   transition: all 1s linear;
+   
+  }

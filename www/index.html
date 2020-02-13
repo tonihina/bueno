@@ -6,97 +6,110 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="css/bienvenida.css">
-    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
 
-<body  class="fondo4">
+<body >
     <div id="contenedor_carga">
-		<img src="img/logo.png" id="logoInicio">
-	</div>
-    <div class="w3-content w3-display-container" style="max-width:800px">
-        <div class="mySlides">
-            <h1 class="titulo">Bienvenido!</h1>
-           
-            <p class="hola">Hola, hablanos sobre tí. Completa los siguientes datos, son necesarios para calcular de manera más
-                precisas tus rutinas y consejos alimenticios, todo para brindarte mejor servicio.</p>
-                <br>
-                <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
-        </div>
-        <div class="mySlides">
-            <main role="main" >
-
-                <section class="content-form">
-            
-                    <h2 class="sub-title">DATOS GENERALES</h2>
-            
-                    <form action="bienvenido.html" method="POST" id="registrar-form" >
-                      
-                        <div class="form-group width-12">
-                             <div class="width-12">
-                              <input type="text" placeholder="Nombre *" class="form-control" name="nombre" id="nombre" required/> 
-                             </div> 
-                             <div class="width-12">
-                                <p id="datoPeso" style="color: white;">  Peso:<span id="valor" ></span></p>
-                              <input type="range" class="slider" name="peso" id="peso" min="40" max="200"/> 
-                              
-                             </div>  
-                        </div>
-            
-                        <div class="form-group">
-                             <div class="width-12">
-                                <p id="datoAltura" style="color: white;">  Altura: <span id="salidaAltura" ></span></p>
-                              <input type="range" class="slider" name="altura" id="altura" min="100" max="230"/> 
-                             </div>
-                        </div>
-                            
-                         <div class="form-group width-12">
-                              <h3 class="sub-form">Has hecho ejercicio</h3>
-                              <div class="width-4">
-                                <label for="si"><input type="radio" id="si" name="hasHecho" value="si" checked/>Si</label>
-                              </div>
-                              <div class="width-4">
-                                <label for="no"><input type="radio" id="no" name="hasHecho" value="no" />No</label>
-                              </div>
-                         </div>
-                          
-                         <br>
-                         <div class="form-group width-12">
-                                <input type="submit" value="Continuar" class="form-control btn btn-principal" id="btn-registrar" />
-                                 
-                         </div>
-                  
-                    </form>
-            
-                </section>
-            </main>
-        </div>
-        <div class="mySlides">
-            <p class="hola">Gracas, enseguida hemos creado un test para cada ejercicio básico, por favor termina este test para que 
-                sepamos tu condición actual físico, no olvides calentar un poco. 30 segundos de ejercicio, y tú, cuantas
-                repeticiones harás, averigualo...
-            </p>
-        </div>
-        
-
-     </div>
-    <div class="next" style="width:100%">
-        <!-- <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>-->
-        
-        <span class="w3-badge demo w3-border w3-transparent w3-hover-white" "></span>
-        <span class="w3-badge demo w3-border w3-transparent w3-hover-white" "></span>
-        <span class="w3-badge demo w3-border w3-transparent w3-hover-white" "></span>
+        <img src="img/logo.png" id="logoInicio">
+    <div id="preloader_2">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
     </div>
-    <script type="text/javascript">
-		window.onload=function(){
-			setTimeout('ocultar()',2000);
-		}
-		function ocultar(){
-			var contenedor = document.getElementById('contenedor_carga');
+    </div>
 
-			contenedor.style.visibility='hidden';
-			contenedor.style.opacity='0';
-		}
-	</script>
-    <script src="js/bienvenida.js"></script>
+    <div data-role="page" id="inicio" data-theme="b" > 
+        <div data-role="header" class="header" data-theme="b">
+    
+        <img src="img/logo.png" class="imagen">
+    </div>
+    <div data-role="main" class="ui-content" data-theme="b">
+        <center><b> BIENVENIDO</b></center>
+        <p>
+            Hola, cuentanos más sobre tí, por favor contesta el siguiente formulario con tus datos
+            esto lo hacemos para tener una base para mejorar tus rutinas y alimentacion personalizada.
+        </p>
+      
+            <div data-role="fieldcontain">
+                <label for="nombre">Nombre:</label>
+                <input type="text" name="nombre" id="nombre" value="" required />
+            </div>
+
+            <div data-role="fieldcontain">
+                <label for="peso">Peso (KG) :</label>
+                <input type="range" name="peso" id="peso" value="40" min="0" max="160" data-popup-enabled="true">
+            </div>
+            <div data-role="fieldcontain">
+                <label for="edad">Edad (Años) :</label>
+                <input type="range" name="edad" id="edad" value="10" min="0" max="100" data-popup-enabled="true">
+            </div>
+            <div data-role="fieldcontain">
+                <label for="altura">Estatura (CM) :</label>
+                <input type="range" name="altura" id="altura" value="100" min="100" max="220" data-popup-enabled="true">
+            </div>
+            <div data-role="fieldcontain">
+                <label for="experiencia">Conoces la calistenia:</label>
+                <select name="experiencia" id="experiencia" data-role="slider" data-mini="true">
+                    <option value="no">No</option>
+                    <option value="si" selected="">Si</option>
+                </select>
+            </div>
+            <div data-role="fieldcontain">
+                <label for="sexo">Sexo:</label>
+                <select name="sexo" id="sexo" data-role="slider" data-mini="true">
+                    <option value="Hombre">M</option>
+                    <option value="Mujer" selected="">F</option>
+                </select>
+                
+                <button type="button" data-theme="b" id="guardardatos" data-ajax="false">Hecho</button>
+
+            </div>
+
+    </div>
+    <div data-role="footer">
+        Version 1.0
+    </div>
+    </div>
+
+    <div data-role="page" id="error">
+        <div data-role="header" data-theme="b"><h1>Error</h1></div>
+           <div data-role="content" data-theme="a">
+        Parece que el nombre de usuario ya existe, por favor te pedimos pongas uno diferente...
+            <a href="#inicio" data-role="button" data-theme="e" data-rel="back">Aceptar</a>
+        </div> 
+        <div data-role="footer">
+            Version 1.0
+        </div>
+    </div>
+    
+    <script type="text/javascript">
+      $(document).ready(function() {
+           
+        });   
+        window.onload = function () {     
+            setTimeout('ocultar()', 100);
+            
+        }
+
+        function ocultar() { 
+            var contenedor = document.getElementById('contenedor_carga');
+            contenedor.style.visibility = 'hidden';
+            contenedor.style.opacity = '0';
+        if(window.localStorage.getItem("objetivo")!=null){
+            
+            window.location.replace("principal.html");
+        }
+        else if(window.localStorage.getItem("nombre")!=null){
+
+            window.location.replace("pruebas.html")
+        }
+            
+            
+        }
+    </script>
     <script src="js/formulario.js"></script>
 </body>
 
